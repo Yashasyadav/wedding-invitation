@@ -10,7 +10,9 @@ export const App: React.FC = () => {
     return (localStorage.getItem('wedding_theme') as 'light' | 'dark') || 'light';
   });
 
-  const [isCoverOpen, setIsCoverOpen] = useState(false);
+  const [isCoverOpen, setIsCoverOpen] = useState(() => {
+    return typeof window !== 'undefined' && window.location.search.includes('opened=true');
+  });
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
