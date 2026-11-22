@@ -95,6 +95,7 @@ export interface InvitationContent {
     whatsAppButtonText: string;
     formTitle: string;
     formSubtitle: string;
+    submitButtonText: string;
   };
   footer: {
     signOff: string;
@@ -238,8 +239,9 @@ export const invitationContent: InvitationContent = {
     whatsAppNumber: "919679545488", // Update with Agan / Shakthi's WhatsApp number when ready
     whatsAppMessageTemplate: "Hi Agan & Shakthi! I'd like to RSVP for your wedding.\nName: \nNumber of guests: \nEvents I can attend: \nArrival plans: ",
     whatsAppButtonText: "RSVP on WhatsApp",
-    formTitle: "Confirm Your Attendance",
-    formSubtitle: "Please let us know if you can make it by 25 November 2026",
+    formTitle: "Grace Our Celebration",
+    formSubtitle: "Kindly favor us with your response by 25 November 2026",
+    submitButtonText: "Bless The Couple & RSVP",
   },
   footer: {
     signOff: "With Love",

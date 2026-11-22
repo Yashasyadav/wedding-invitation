@@ -121,10 +121,10 @@ export const RsvpSection: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => setAttending('yes')}
-                    className={`py-2 px-3 rounded-lg text-xs font-medium border text-center transition-all ${
+                    className={`py-2.5 px-3 rounded-lg text-xs tracking-wide border text-center transition-all cursor-pointer ${
                       attending === 'yes'
-                        ? 'border-gold bg-gold/15 text-gold font-semibold'
-                        : 'border-gold/30 bg-transparent text-subtle hover:border-gold/50'
+                        ? 'border-gold bg-gold/20 text-gold font-semibold shadow-sm'
+                        : 'border-gold/30 bg-transparent text-subtle hover:border-gold/60'
                     }`}
                   >
                     Joyfully Accept
@@ -132,10 +132,10 @@ export const RsvpSection: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => setAttending('no')}
-                    className={`py-2 px-3 rounded-lg text-xs font-medium border text-center transition-all ${
+                    className={`py-2.5 px-3 rounded-lg text-xs tracking-wide border text-center transition-all cursor-pointer ${
                       attending === 'no'
-                        ? 'border-gold bg-gold/15 text-gold font-semibold'
-                        : 'border-gold/30 bg-transparent text-subtle hover:border-gold/50'
+                        ? 'border-gold bg-gold/20 text-gold font-semibold shadow-sm'
+                        : 'border-gold/30 bg-transparent text-subtle hover:border-gold/60'
                     }`}
                   >
                     Regretfully Decline
@@ -194,7 +194,7 @@ export const RsvpSection: React.FC = () => {
                   rows={2}
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
-                  placeholder="Warm wishes for Rohan & Sakshi..."
+                  placeholder={`Warm wishes for ${hero.groomFirstName} & ${hero.brideFirstName}...`}
                   className="w-full px-3.5 py-2 text-sm rounded-lg bg-cream/50 border border-gold/40 text-ink placeholder:text-subtle/50 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold resize-none"
                 />
               </div>
@@ -204,7 +204,7 @@ export const RsvpSection: React.FC = () => {
                 type="submit"
                 className="w-full gold-button mt-2 text-[9px] py-2.5 font-medium cursor-pointer"
               >
-                Confirm Attendance
+                {rsvp.submitButtonText || 'Bless The Couple & RSVP'}
               </button>
             </form>
           )}

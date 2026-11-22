@@ -16,12 +16,20 @@ export const BlessingsSection: React.FC = () => {
       </Reveal>
 
       <Reveal delay={0.2}>
-        <p className="family-line">
-          {blessing.header}
-          <span>{blessing.groomFullName}</span>
-          <span>&amp;</span>
-          <span>{blessing.brideFullName}</span>
-        </p>
+        <div className="family-line">
+          <p className="family-header">{blessing.header}</p>
+          <div className="family-couple">
+            <div className="family-person">
+              <strong>{blessing.groomFullName}</strong>
+              {blessing.groomParents && <small>{blessing.groomParents}</small>}
+            </div>
+            <span className="family-amp" aria-hidden="true">&amp;</span>
+            <div className="family-person">
+              <strong>{blessing.brideFullName}</strong>
+              {blessing.brideParents && <small>{blessing.brideParents}</small>}
+            </div>
+          </div>
+        </div>
       </Reveal>
 
       <Reveal direction="up" delay={0.3}>
