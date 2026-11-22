@@ -5,12 +5,13 @@ import { Reveal } from '../primitives/Reveal';
 import { CheckCircle2, MessageCircle } from 'lucide-react';
 
 export const RsvpSection: React.FC = () => {
-  const { rsvp } = invitationContent;
+  const { rsvp, events, hero } = invitationContent;
+  const ceremonyTitles = events.ceremonies.map((c) => c.title);
 
   const [name, setName] = useState('');
   const [attending, setAttending] = useState<'yes' | 'no'>('yes');
   const [guests, setGuests] = useState('1');
-  const [selectedEvents, setSelectedEvents] = useState<string[]>(['Haldi', 'Mehendi & Sangeet', 'The Wedding']);
+  const [selectedEvents, setSelectedEvents] = useState<string[]>(ceremonyTitles);
   const [notes, setNotes] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<{ name?: string }>({});
@@ -39,7 +40,7 @@ export const RsvpSection: React.FC = () => {
   };
 
   const getCustomWhatsAppUrl = () => {
-    const text = `Hi Rohan! I'd like to RSVP for your wedding.\nName: ${name || '[Your Name]'}\nAttending: ${attending === 'yes' ? 'Joyfully Accept' : 'Regretfully Decline'}\nNumber of guests: ${guests}\nEvents I can attend: ${selectedEvents.join(', ')}\nNotes: ${notes || 'None'}`;
+    const text = `Hi ${hero.groomFirstName} & ${hero.brideFirstName}! I'd like to RSVP for your wedding.\nName: ${name || '[Your Name]'}\nAttending: ${attending === 'yes' ? 'Joyfully Accept' : 'Regretfully Decline'}\nNumber of guests: ${guests}\nEvents I can attend: ${selectedEvents.join(', ')}\nNotes: ${notes || 'None'}`;
     return `https://wa.me/${rsvp.whatsAppNumber}?text=${encodeURIComponent(text)}`;
   };
 
@@ -168,7 +169,7 @@ export const RsvpSection: React.FC = () => {
                       Events You Plan to Attend
                     </label>
                     <div className="space-y-1.5 text-xs text-ink">
-                      {['Haldi', 'Mehendi & Sangeet', 'The Wedding'].map((evt) => (
+                      {ceremonyTitles.map((evt) => (
                         <label key={evt} className="flex items-center gap-2 cursor-pointer">
                           <input
                             type="checkbox"

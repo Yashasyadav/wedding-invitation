@@ -51,7 +51,7 @@ export interface InvitationContent {
     scrollHintText: string;
   };
   countdown: {
-    targetDateISO: string; // 2026-12-10T19:00:00+05:30
+    targetDateISO: string; // 2026-12-13T06:35:00+05:30
     eyebrow: string;
     title: string;
     labels: {
@@ -90,7 +90,7 @@ export interface InvitationContent {
   rsvp: {
     title: string;
     copy: string;
-    whatsAppNumber: string; // e.g. 919679545488
+    whatsAppNumber: string;
     whatsAppMessageTemplate: string;
     whatsAppButtonText: string;
     formTitle: string;
@@ -104,13 +104,13 @@ export interface InvitationContent {
 
 export const invitationContent: InvitationContent = {
   meta: {
-    title: "Rohan & Sakshi · 10 December 2026",
-    description: "Celebrate Rohan and Sakshi's wedding on 10 December 2026 in Haldwani, Uttarakhand.",
+    title: "Agan & Shakthi · 12 & 13 December 2026",
+    description: "Celebrate Agan and Shakthi's wedding on 12 & 13 December 2026 at ABS Raj Hi Tech Mahal, Kalayarkovil, Sivaganga district.",
     favicon: "/assets/favicon.png",
     ogImage: "/assets/invitation-cover.jpg",
   },
   audio: {
-    // Leave empty by default; set to e.g. '/assets/shehnai-classical.mp3' to enable floating player
+    // Leave empty by default; set to e.g. '/assets/nadaswaram-wedding.mp3' to enable floating player
     src: "",
     title: "Auspicious Wedding Melody",
   },
@@ -118,19 +118,19 @@ export const invitationContent: InvitationContent = {
     image: "/assets/invitation-cover.jpg",
     openButtonText: "OPEN INVITATION",
     skipButtonText: "Skip to Invitation",
-    ariaLabel: "Open Rohan and Sakshi's invitation",
+    ariaLabel: "Open Agan and Shakthi's invitation",
   },
   hero: {
     ornament: "✦",
     eyebrow: "Together with our families",
-    groomFirstName: "Rohan",
-    brideFirstName: "Sakshi",
-    displayDate: "10 · 12 · 2026",
-    copy: "One college. A little destiny. Eight years of choosing each other. Now, a lifetime to look forward to.",
+    groomFirstName: "Agan",
+    brideFirstName: "Shakthi",
+    displayDate: "12 & 13 · 12 · 2026",
+    copy: "Two souls, one beautiful journey. With love in our hearts and the blessings of our elders, we begin our forever.",
     scrollHintText: "SCROLL",
   },
   countdown: {
-    targetDateISO: "2026-12-10T19:00:00+05:30",
+    targetDateISO: "2026-12-13T06:35:00+05:30", // Muhurtham: 13 Dec 2026, 6:35 AM IST
     eyebrow: "Counting every moment",
     title: "The Big Day Is Near",
     labels: {
@@ -144,29 +144,29 @@ export const invitationContent: InvitationContent = {
   blessing: {
     quote: "“Destiny brought us together. Every day since, we’ve chosen each other.”",
     header: "With our families’ blessings",
-    groomFullName: "Rohan Singh Poona",
-    groomParents: "Smt Rekha Poona and Shri Bahadur Singh Poona",
-    brideFullName: "Sakshi Kumari",
-    brideParents: "Smt Sushama Kumari and Shri Shiv Raja",
+    groomFullName: "Agan",
+    groomParents: "Son of our beloved parents", // Pending parent names
+    brideFullName: "Shakthi",
+    brideParents: "Daughter of our beloved parents", // Pending parent names
   },
   story: {
     eyebrow: "Our story, so far",
     title: "A Path of Moments",
     milestones: [
       {
-        date: "2018 · WHERE IT ALL BEGAN",
-        title: "A beautiful coincidence",
-        note: "From different corners of the country to the same college. Life brought us to NIT Puducherry, and to each other.",
+        date: "WHERE IT ALL BEGAN",
+        title: "A beautiful beginning",
+        note: "From the very first conversation to countless shared memories, fate brought us together on this wonderful path.",
       },
       {
-        date: "THE YEARS IN BETWEEN",
-        title: "Our kind of together",
-        note: "Coffees, adventures, workouts, food hunts and a little healthy competition. Through every season, we kept choosing the same team — us.",
+        date: "THE JOURNEY OF LOVE",
+        title: "Growing together",
+        note: "Through every step, laughter, and milestone, understanding turned to love, and love grew into an unbreakable bond.",
       },
       {
-        date: "2026 · THE NEXT CHAPTER",
-        title: "A lifetime? Yes.",
-        note: "Eight years later, we're getting married. With full hearts and our favourite people around us, we're ready for everything that comes next.",
+        date: "DECEMBER 2026 · THE NEXT CHAPTER",
+        title: "A lifetime together",
+        note: "Surrounded by our dearest family and friends, we step into the sacred bond of marriage with gratitude and joy.",
       },
     ],
   },
@@ -177,37 +177,37 @@ export const invitationContent: InvitationContent = {
     addToCalendarButtonText: "Add to calendar",
     ceremonies: [
       {
-        id: "haldi",
-        symbol: "✿",
-        title: "Haldi",
-        date: "Wednesday, 09 December 2026",
-        time: "10:00 AM onwards",
-        venue: "Hotel Lemon Park, Haldwani, Uttarakhand",
-        mapQuery: "Hotel+Lemon+Park+Haldwani",
-        calendarStartDate: "2026-12-09T10:00:00+05:30",
-        calendarEndDate: "2026-12-09T14:00:00+05:30",
-      },
-      {
-        id: "mehendi",
+        id: "engagement",
         symbol: "◇",
-        title: "Mehendi & Sangeet",
-        date: "Wednesday, 09 December 2026",
+        title: "Engagement",
+        date: "Saturday, 12 December 2026",
         time: "6:00 PM onwards",
-        venue: "Madhuban Banquet Hall, Haldwani, Uttarakhand",
-        mapQuery: "Madhuban+Banquet+Hall+Haldwani",
-        calendarStartDate: "2026-12-09T18:00:00+05:30",
-        calendarEndDate: "2026-12-09T23:00:00+05:30",
+        venue: "ABS Raj Hi Tech Mahal, Kalayarkovil, Sivaganga District",
+        mapQuery: "ABS+Raj+Hi+Tech+Mahal+Kalayarkovil",
+        calendarStartDate: "2026-12-12T18:00:00+05:30",
+        calendarEndDate: "2026-12-12T21:00:00+05:30",
       },
       {
-        id: "wedding",
+        id: "muhurtham",
         symbol: "❦",
-        title: "The Wedding",
-        date: "Thursday, 10 December 2026",
-        time: "Baraat from 7:00 PM",
-        venue: "Kripa Sindhu Banquet and Party Lawn, Haldwani",
-        mapQuery: "Kripa+Sindhu+Banquet+And+Party+Lawn+Haldwani",
-        calendarStartDate: "2026-12-10T19:00:00+05:30",
-        calendarEndDate: "2026-12-11T00:00:00+05:30",
+        title: "Muhurtham",
+        date: "Sunday, 13 December 2026",
+        time: "6:35 AM – 7:30 AM",
+        venue: "ABS Raj Hi Tech Mahal, Kalayarkovil, Sivaganga District",
+        mapQuery: "ABS+Raj+Hi+Tech+Mahal+Kalayarkovil",
+        calendarStartDate: "2026-12-13T06:35:00+05:30",
+        calendarEndDate: "2026-12-13T08:00:00+05:30",
+      },
+      {
+        id: "reception",
+        symbol: "✿",
+        title: "Reception",
+        date: "Sunday, 13 December 2026",
+        time: "11:00 AM onwards",
+        venue: "ABS Raj Hi Tech Mahal, Kalayarkovil, Sivaganga District",
+        mapQuery: "ABS+Raj+Hi+Tech+Mahal+Kalayarkovil",
+        calendarStartDate: "2026-12-13T11:00:00+05:30",
+        calendarEndDate: "2026-12-13T15:00:00+05:30",
       },
     ],
   },
@@ -218,7 +218,7 @@ export const invitationContent: InvitationContent = {
       {
         image: "/assets/wedding-couple.jpg",
         label: "A love worth celebrating",
-        alt: "A bride and groom during a traditional Indian wedding ceremony",
+        alt: "A bride and groom during a traditional wedding ceremony",
       },
       {
         image: "/assets/flower-ceremony.jpg",
@@ -235,14 +235,14 @@ export const invitationContent: InvitationContent = {
   rsvp: {
     title: "Will you join us?",
     copy: "Our favourite people. Our happiest days. It would mean the world to have you with us.",
-    whatsAppNumber: "919679545488",
-    whatsAppMessageTemplate: "Hi Rohan! I'd like to RSVP for your wedding.\nName: \nNumber of guests: \nEvents I can attend: \nArrival plans: ",
+    whatsAppNumber: "919679545488", // Update with Agan / Shakthi's WhatsApp number when ready
+    whatsAppMessageTemplate: "Hi Agan & Shakthi! I'd like to RSVP for your wedding.\nName: \nNumber of guests: \nEvents I can attend: \nArrival plans: ",
     whatsAppButtonText: "RSVP on WhatsApp",
     formTitle: "Confirm Your Attendance",
-    formSubtitle: "Please let us know if you can make it by 20 November 2026",
+    formSubtitle: "Please let us know if you can make it by 25 November 2026",
   },
   footer: {
     signOff: "With Love",
-    metaLine: "ROHAN & SAKSHI · HALDWANI · 10 DECEMBER 2026",
+    metaLine: "AGAN & SHAKTHI · KALAYARKOVIL · 12 & 13 DECEMBER 2026",
   },
 };

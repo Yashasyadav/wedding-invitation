@@ -11,7 +11,10 @@ export const EventsSection: React.FC = () => {
   const { events, hero } = invitationContent;
   const coupleName = `${hero.groomFirstName} & ${hero.brideFirstName}`;
 
-  const mainWeddingCeremony = events.ceremonies.find((c) => c.id === 'wedding') || events.ceremonies[2];
+  const mainWeddingCeremony =
+    events.ceremonies.find((c) => c.id === 'muhurtham' || c.id === 'wedding') ||
+    events.ceremonies[1] ||
+    events.ceremonies[0];
 
   const handleDownloadICS = (e: React.MouseEvent, ceremony: Ceremony) => {
     e.preventDefault();
